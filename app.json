@@ -1,41 +1,78 @@
 {
   "expo": {
-    "name": "rider-pro",
-    "slug": "rider-pro",
+    "name": "Rider Pro",
+    "slug": "rideapp",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./src/assets/images/icon.png",
     "scheme": "myapp",
-    "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
-    "ios": {
-      "supportsTablet": true
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./src/assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
     },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+    "ios": {
+      "supportsTablet": true,
+      "enableHermes": true,
+      "bundleIdentifier": "com.vishal.rideapp",
+      "config": {
+        "googleMapsApiKey": "AIzaSyDemnttwuH01SArgV3ksgXUgRc0sPS8YNE"
+      },
+      "runtimeVersion": {
+        "policy": "appVersion"
       }
     },
+
+    "android": {
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyDemnttwuH01SArgV3ksgXUgRc0sPS8YNE"
+        }
+      },
+      "adaptiveIcon": {
+        "foregroundImage": "./src/assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.vishal.rideapp",
+      "permissions": [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION"
+      ],
+      "runtimeVersion": "1.0.0",
+      "enableHermes": true
+    },
+
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./src/assets/images/favicon.png"
     },
     "plugins": [
       "expo-router",
       [
-        "expo-splash-screen",
+        "expo-location",
         {
-          "image": "./assets/images/splash-icon.png",
-          "imageWidth": 200,
-          "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
+          "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location."
         }
       ]
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "191e1cbb-24ea-4633-bfc9-3e75e752f730"
+      }
+    },
+    "updates": {
+      "url": "https://u.expo.dev/191e1cbb-24ea-4633-bfc9-3e75e752f730"
     }
   }
 }
