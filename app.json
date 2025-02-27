@@ -18,7 +18,7 @@
       "enableHermes": true,
       "bundleIdentifier": "com.vishal.rideapp",
       "config": {
-        "googleMapsApiKey": "AIzaSyDemnttwuH01SArgV3ksgXUgRc0sPS8YNE"
+        "googleMapsApiKey": ""
       },
       "runtimeVersion": {
         "policy": "appVersion"
@@ -28,7 +28,7 @@
     "android": {
       "config": {
         "googleMaps": {
-          "apiKey": "AIzaSyDemnttwuH01SArgV3ksgXUgRc0sPS8YNE"
+          "apiKey": ""
         }
       },
       "adaptiveIcon": {
